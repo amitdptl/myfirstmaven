@@ -25,10 +25,10 @@ public class BaseTest extends  BasePage
         driver.get("http://demo.nopcommerce.com/");
 
     }
-    @AfterMethod
-    public void closeBrowser()
-    {
-        driver.close();
-    }
+//    @AfterMethod
+//    public void closeBrowser()
+//    {
+//        driver.close();
+//    }
 
 }
