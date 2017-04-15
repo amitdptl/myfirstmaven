@@ -54,6 +54,10 @@ public class HomePage extends Utils {
         clickOnElement(By.linkText("Computers"));
         assertByGetText(By.xpath("//div/div[1]/h1"),"Computers","Not nevigate to Computer Page");
     }
+   // public void clickOnGiftCards();
+    {
+  //      clickOnElement(By.);
+    }
 
 
 

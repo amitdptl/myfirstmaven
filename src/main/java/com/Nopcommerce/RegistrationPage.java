@@ -27,6 +27,7 @@ public class RegistrationPage extends Utils
         typeText(By.id("ConfirmPassword"),"abcd123");
         clickOnElement(By.id("register-button"));
 
+
     }
 
 

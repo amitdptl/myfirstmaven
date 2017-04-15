@@ -18,13 +18,18 @@ public class TestSuit extends BaseTest
     Utils utils=new Utils();
     Computers computers =new Computers();
     NoteBook noteBook= new NoteBook();
+    GiftCard giftCard = new GiftCard();
+    $25VirtualGiftCard virtualGiftCard=new $25VirtualGiftCard();
+    EmailFriend emailFriend= new EmailFriend();
 
     @Test
     public void userShouldRegisterSuccessfully()
     {
         homepage.clickOnRegistration();
         registrationPage.registrationPageFilling();
-        Assert.assertEquals("Your registration completed",Utils.getText(By.className("result")));
+        //Assertion
+        utils.assertByGetText(By.className("result"),"Your registration completed","Assert Fail");
+
       //  homepage.logOut();
 
     }
@@ -64,5 +69,24 @@ public class TestSuit extends BaseTest
         //
         Assert.assertTrue(utils.ascendingOrLowToHigher(By.xpath("//h2")),"Fail sorting order");
     }
+    @Test
+    public void userShouldSendGiftCardSucessfully()
+    {
+        homepage.clickOnRegistration();
+        registrationPage.registrationPageFilling();
+        giftCard.selectGiftCard();
+        virtualGiftCard.virtualGiftCard$25();
+        emailFriend.sendEmailFriendGiftCards();
+
+        utils.assertByGetText(By.xpath("//div[@class='master-wrapper-page']/div[3]/div/div/div/div[2]/div[2]"),
+                "Your message has been sent.","Assert Fail");
+    }
+    @Test
+    public void userShouldBuyClothingSuccessfully()
+    {
+        apparelCloth.selectClothngComparision();
+
+    }
+
 
 }
