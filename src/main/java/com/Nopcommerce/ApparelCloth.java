@@ -47,25 +47,36 @@ public class ApparelCloth extends Utils
         sleep(2);
         clickOnElement(By.linkText("product comparison"));
 
-
-
-
-
-
-    //Assert
+        //Assert
         softAssert.assertEquals(getText(By.linkText("Oversized Women T-Shirt")),"Oversized Women T-Shirt","Assert Fail");
-        System.out.println("1st cloth message asserted");
+        System.out.println("1st cloth asserted");
         softAssert.assertEquals(getText(By.xpath("(//a[contains(text(),'Custom T-Shirt')])[2]")),"Custom T-Shirt","Assert Fail");
-        System.out.println("2nd cloth message asserted");
-        //clicking on clear list
+        System.out.println("2nd cloth asserted");
+        clickOnElement(By.xpath("//div[@class='center-2']/div/div[2]/a"));
 
-        //clickOnElement(By.xpath("//div[@class='center-2']/div/div[2]/a"));
-       // softAssert.assertEquals(getText(By.xpath("//div[@class='center-2']/div/div[2]/div")),"You have no items to compare.",
-                //"Asset Fail");
 
-        System.out.println("3rd cloth message asserted");
-
-        softAssert.assertAll();
+//
+// softAssert.assertEquals(getText(By.xpath("")),"","");
+//
+//
+//
+//
+//
+//
+//    //Assert
+//        softAssert.assertEquals(getText(By.linkText("Oversized Women T-Shirt")),"Oversized Women T-Shirt","Assert Fail");
+//        System.out.println("1st cloth message asserted");
+//
+//        System.out.println("2nd cloth message asserted");
+//        //clicking on clear list
+//
+//        //clickOnElement(By.xpath("//div[@class='center-2']/div/div[2]/a"));
+//       // softAssert.assertEquals(getText(By.xpath("//div[@class='center-2']/div/div[2]/div")),"You have no items to compare.",
+//                //"Asset Fail");
+//
+//        System.out.println("3rd cloth message asserted");
+//
+//        softAssert.assertAll();
 
     }
 }
