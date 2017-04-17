@@ -21,6 +21,8 @@ public class TestSuit extends BaseTest
     GiftCard giftCard = new GiftCard();
     $25VirtualGiftCard virtualGiftCard=new $25VirtualGiftCard();
     EmailFriend emailFriend= new EmailFriend();
+    Clothing clothing=new Clothing();
+    CompareProductsApparel compareProductsApparel=new CompareProductsApparel();
 
     @Test
     public void userShouldRegisterSuccessfully()
@@ -44,6 +46,7 @@ public class TestSuit extends BaseTest
         logInPage.logInPagefilling();
         Utils.assertByGetText(By.className("topic-block-title"),
                 Utils.getText(By.className("Welcome to our store")),"");
+
 
     }
 
@@ -83,8 +86,12 @@ public class TestSuit extends BaseTest
     }
     @Test
     public void userShouldBuyClothingSuccessfully()
+
     {
-        apparelCloth.selectClothngComparision();
+        homepage.clickOnApparel();
+        clothing.clothingApparel();
+        compareProductsApparel.compareProductsApparelPage();
+
 
     }
 
