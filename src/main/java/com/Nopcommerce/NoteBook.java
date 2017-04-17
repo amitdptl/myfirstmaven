@@ -10,7 +10,7 @@ public class NoteBook extends Utils
 {
     public void sortNoteBookPageProductAtoZ()
     {
-        selectSortByPosition("Name: Z to A");
+        selectSortByPosition("Name: A to Z");
         Assert.assertTrue(driver.findElement(By.xpath("//select[@id='products-orderby']/option[2]")).isSelected(),
                 "Position A to Z is not selected");
     }

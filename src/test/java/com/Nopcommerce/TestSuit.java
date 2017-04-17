@@ -33,7 +33,6 @@ public class TestSuit extends BaseTest
         utils.assertByGetText(By.className("result"),"Your registration completed","Assert Fail");
 
       //  homepage.logOut();
-
     }
 
     @Test
@@ -44,21 +43,12 @@ public class TestSuit extends BaseTest
         homepage.logOut();
         homepage.clickOnLogInPage();
         logInPage.logInPagefilling();
-        Utils.assertByGetText(By.className("topic-block-title"),
+        utils.assertByGetText(By.className("topic-block-title"),
                 Utils.getText(By.className("Welcome to our store")),"");
-
-
     }
 
     @Test
-
-    public void userShouldCompareClothingSuccessfully()
-    {
-        homepage.clickOnApparel();
-        apparelCloth.selectClothngComparision();
-    }
-    @Test
-    public void userSouldCompareClothingSuccessfully()
+    public void userSouldElectronicsSuccessfully()
     {
         homepage.clickOnElectronics();
         electronic.cellPhone();
@@ -91,8 +81,8 @@ public class TestSuit extends BaseTest
         homepage.clickOnApparel();
         clothing.clothingApparel();
         compareProductsApparel.compareProductsApparelPage();
-
-
+        utils.assertByGetText(By.xpath("//div[@class='center-2']/div/div[2]/a"),"You have no items to compare.","Assert Fail");
+        
     }
 
 

@@ -16,16 +16,17 @@ public class Electronics extends Utils
     public void cellPhone()
     {
         //clicking on electronics on top line
-        clickOnElement(By.xpath("\"//div[@class='master-wrapper-page']/div[2]/ul/li[2]/a\""));
+        clickOnElement(By.xpath("//div[@class='master-wrapper-page']/div[2]/ul/li[2]/a"));
 
         //clicking on cell phone at left side
-        clickOnElement(By.xpath("(//a[contains(text(),'Cell phones')])[3])"));
+        clickOnElement(By.linkText("/cell-phones"));
+     //   clickOnElement(By.xpath("//div[@class='listbox']/ul/li/ul/li/a"));
 
         //add to cart 1st phone
         clickOnElement(By.xpath("//div[@class='item-grid']/div/div/div[2]/div[3]/div/input"));
-
+    //    sleep(2);
         //closing tab on the top right hand side green
-        clickOnElement(By.cssSelector("span.close"));
+        //clickOnElement(By.cssSelector("span.close"));
         //Refresh page until Page load
         Utils.refresh();
 
