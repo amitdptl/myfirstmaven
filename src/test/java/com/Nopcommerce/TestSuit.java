@@ -82,7 +82,7 @@ public class TestSuit extends BaseTest
         clothing.clothingApparel();
         compareProductsApparel.compareProductsApparelPage();
         utils.assertByGetText(By.xpath("//div[@class='center-2']/div/div[2]/a"),"You have no items to compare.","Assert Fail");
-        
+
     }
 
 
